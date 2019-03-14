@@ -32,16 +32,16 @@ struct Value {
 }
 
 
-struct Map(Key, Value) {
+struct Map(Value) {
   entries @0 :List(Entry);
   struct Entry {
-    key @0 :Key;
+    key @0 :Text;
     value @1 :Value;
   }
 }
 
 
 struct Kwargs {
-    kwargs @0: Map(Text, Value);
+    kwargs @0: Map(Value);
 }
 
