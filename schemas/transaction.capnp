@@ -17,7 +17,7 @@ struct ContractPayload {
 
     contractName @3 :Text;
     functionName @4 :Text;
-    kwargs @5 :V.Map(Text, V.Value);
+    kwargs @5 :V.Map(V.Value);
 }
 
 
